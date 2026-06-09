@@ -1,0 +1,27 @@
+=========================================================
+Prolog Music Database - Example Queries
+=========================================================
+
+1. List all albums currently in the catalogue:
+   album(Album).
+
+2. Find the genre of a specific album (e.g., 'Thriller'):
+   genero('Thriller', Genre).
+
+3. Identify all albums that belong to the 'Rock' genre:
+   genero(Album, 'Rock').
+
+4. Find all albums categorized under 'MPB':
+   genero(Album, 'MPB').
+
+5. Determine which artist/band recorded 'the_dark_side_of_the_moon':
+   gravado_por('the_dark_side_of_the_moon', Band).
+
+6. List all albums that do NOT belong to the 'Pop' genre:
+   album(Album), \+ genero(Album, 'Pop').
+
+7. Find albums where the genre is either 'Rock' or 'Funk':
+   genero(Album, Genre), (Genre = 'Rock'; Genre = 'Funk').
+
+8. Check if a specific album exists in the database:
+   album('Imagine').
